@@ -1,4 +1,5 @@
 import 'package:bmi_app/screens/bmi_screen_1.dart';
+import 'package:bmi_app/screens/bmi_screen_2.dart';
 import 'package:bmi_app/util/text_field_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -30,6 +31,10 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: const BmiScreen1(),
+      routes: {
+        '/bmiscreen1': (context) => const BmiScreen1(),
+        '/bmiscreen2': (context) => const BmiScreen2()
+      },
     );
   }
 }

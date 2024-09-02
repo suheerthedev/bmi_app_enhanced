@@ -8,21 +8,40 @@ class BmiScreen1 extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            const Text(
-              'BMI',
-              style: TextStyle(fontSize: 44, fontWeight: FontWeight.bold),
-            ),
-            const Text(
-              'Calculator',
-              style: TextStyle(fontSize: 34, fontWeight: FontWeight.w600),
+            const Column(
+              children: [
+                Text(
+                  'BMI',
+                  style: TextStyle(fontSize: 44, fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  'Calculator',
+                  style: TextStyle(fontSize: 34, fontWeight: FontWeight.w600),
+                ),
+              ],
             ),
             SizedBox.square(
               dimension: 100,
-              child: Image.asset('assets/images/bmiappicon.png'),
+              child: Image.asset('assets/images/bmimeter2.png'),
             ),
-            ElevatedButton(onPressed: () {}, child: const Text("Start"))
+            SizedBox(
+              width: 150,
+              child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10)),
+                  ),
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/bmiscreen2');
+                  },
+                  child: const Text(
+                    "Start",
+                    style: TextStyle(fontSize: 20, color: Colors.black),
+                  )),
+            )
           ],
         ),
       ),
