@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class BmiScreen1 extends StatelessWidget {
-  const BmiScreen1({super.key});
+class BmiHomeScreen extends StatelessWidget {
+  const BmiHomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
